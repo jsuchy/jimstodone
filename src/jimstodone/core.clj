@@ -9,6 +9,7 @@
 
 (defroutes jimstodone-routes
   (GET "/" [] (redirect "/list/index"))
+  (GET "/rick" [] (render-template "index"))
   (controller-router 'jimstodone.controller)
   (not-found (render-template "not_found" :template-root "jimstodone/view" :ns `jimstodone.view.view-helpers)))
 
